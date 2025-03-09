@@ -32,7 +32,7 @@ def index(request):
 
 @login_required
 @require_POST
-def switchCarDriverUser(request, pk):
+def switchcardriveruser(request, pk):
     car = get_object_or_404(Car, pk=pk)
     user = request.user
     if user in car.drivers.all():

@@ -21,7 +21,7 @@
     <li><strong>License number: </strong>{{ driver.license_number }}</li>
     {% endfor %}
   </ul>
-  <form method="POST" action="{% url 'taxi:switchCarDriverUser' car.pk %}">
+  <form method="POST" action="{% url 'taxi:switchcardriveruser' car.pk %}">
     {% csrf_token %}
     {% if request.user in car.drivers.all %}
       <button type="submit" class="btn btn-danger ml-3">Delete me from this car</button>
